@@ -5,7 +5,7 @@ We consider a one-steg approach with fixed effect model (mild heterofenity handl
 We provide:
 
 - compR: a data set with trial id (trial), group of treatment (grpCT), time of event (failure_time), type of event (failure_type), treatment information (treated/control) and age (continuous variable)
-- Meta-analysis for competing risks: script with all the function in R we implemented for:
+- Meta-analysis for compR: script with all the function in R we implemented for:
  
          -forest plot (treatment effect and quantification of heterogeneity)
          
