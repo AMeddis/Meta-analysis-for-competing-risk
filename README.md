@@ -17,7 +17,7 @@ We provide:
          
          -interaction between treatment effect and inidividual level variable
  
-- Meta-analysis_results: results of the proposed analysis for a typical analysis using the compR data (anlaysis on local relapse).
+- Meta-analysis_example: results of the proposed analysis for a typical analysis using the compR data (anlaysis on local relapse).
 
 
 
