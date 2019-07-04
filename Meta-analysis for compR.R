@@ -11,11 +11,6 @@
 #@importFrom cmprsk survival 
 #@importFrom meta 
 
-#strata (su cosa voglio stratificare) per il for
-#per crr: varibile tempo e status - treatment variable (cov for the model(matrix or vector)) - tipo di failure 
-#se si vogliono conisderare dei subgroups (groupe)
-#quantity se si vuole SHR o CSHR
-##assumiamo 0 come censurati
 
 #@param ftime: vector of failure/censoring times
 #@param fstatus: vector of type of events (0 for censoring)
@@ -341,3 +336,70 @@ plot(cox.zph(cox.rel.mv, transform='identity'), ylab="beta(t)",
      main=paste("schoenfeld residual-trial=",16,""))
 
 dev.off()
+
+                   
+#-----------------------interactions age:treatment (distant relapse)------------------------------
+ ##design matrix
+M<-model.matrix( ~ 0+ compR$trt +compR$age + compR$trt:compR$age )
+
+#stratified Fine-Gray model
+mod_str=crrs(ftime=compR$failure_time, fstatus=compR$failure_type.n,
+             cov1=M[,2:4], strata=compR$trial, failcode=2, # distant failure
+             cencode=0)                   
+#beta_trt<-c(coef=round(exp(mod_str$coef[1]),3),
+#            inf=round(exp(mod_str$coef[1]-1.96*sqrt(mod_str$var[1,1])),3),
+#            sup=round(exp(mod_str$coef[1]+1.96*sqrt(mod_str$var[1,1])),3))
+                   
+#interaction term
+beta_int<-c(coef=round(exp(mod_str$coef[3]),3),
+            inf=round(exp(mod_str$coef[3]-1.96*sqrt(mod_str$var[3,3])),3),
+            sup=round(exp(mod_str$coef[3]+1.96*sqrt(mod_str$var[3,3])),3))
+
+#--------------------interaction age:treatment modalities (distant relapse)------------------------
+#we want to understant if the age is significant in the treatment efficacy for a specific treatment type
+#thus we first stratify on the treatment type (e.g. adjuvant) and 
+#we employ the stratified (on trials) Fine-Gray model in this subgroup
+#with the treatment variable and the interaction term.
+
+#first stratification (treatment modality = adjuvant)
+adj<-filter(compR,grpCT=="Adjuvant")
+#design Matrix
+M2<-model.matrix( ~ 0+ adj$trt +adj$age + adj$trt:adj$age )
+#stratified Fine-Gray model
+mod_adj<-crrs(ftime=adj$failure_time, fstatus=adj$failure_type.n,
+              cov1=M2[,2:4],
+              strata=adj$trial, failcode=2, #distant relapse
+              cencode=0)
+#interaction trt:age for adjuvant chemotherapy       
+beta_adj_int<-c(coef=round(exp(mod_adj$coef[3]),3),
+            inf=round(exp(mod_adj$coef[3]-1.96*sqrt(mod_adj$var[3,3])),3),
+            sup=round(exp(mod_adj$coef[3]+1.96*sqrt(mod_adj$var[3,3])),3))
+       
+beta_adj_int
+                  
+                 
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
