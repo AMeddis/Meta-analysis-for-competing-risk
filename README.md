@@ -4,7 +4,7 @@ We propose formal guidelines to conduct an Individual Patient Data meta-analysis
 
 We provide:
 
-- compR: a data set with trial id (trial), group of treatment (grpCT), time of event (failure_time), type of event (failure_type), treatment information (treated/control) and age (continuous variable)
+- compR: a recreated data set with trial id (trial), group of treatment (grpCT), time of event (failure_time), type of event (failure_type), treatment information (treated/control) and age (continuous variable)
 - Meta-analysis for compR: R script with functions for
  
          -drawing forest plots
@@ -23,7 +23,9 @@ We provide:
 
 Package used for the code:
 -survival, comprisk, crrSC
--meta,etm
--grid,dplyr,ggplot2
+
+-meta, etm
+
+-grid, dplyr, ggplot2
 
  
