@@ -21,5 +21,9 @@ We provide:
  
 
 
+Package used for the code:
+-survival, comprisk, crrSC
+-meta,etm
+-grid,dplyr,ggplot2
 
  
