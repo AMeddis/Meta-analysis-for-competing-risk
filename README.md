@@ -21,12 +21,13 @@ We provide:
  
 
 
-Package used for the code:
+### Package used for the code:
 
--survival, comprisk, crrSC
+-survival, comprisk, crrSC 
 
 -meta, etm
 
 -grid, dplyr, ggplot2
 
  
+### Supplementary material and code for the paper "Meta-analysis of clinical trials with competing time-to-event endpoints" by A Meddis, A Latouche, B Zhou, S. Michiels and J. Fine .
