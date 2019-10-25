@@ -30,4 +30,4 @@ We provide:
 -grid, dplyr, ggplot2
 
  
-### Supplementary material and code for the paper "Meta-analysis of clinical trials with competing time-to-event endpoints" by A Meddis, A Latouche, B Zhou, S. Michiels and J. Fine .
+###### Supplementary material and code for the paper "Meta-analysis of clinical trials with competing time-to-event endpoints" by A Meddis, A Latouche, B Zhou, S. Michiels and J. Fine .
