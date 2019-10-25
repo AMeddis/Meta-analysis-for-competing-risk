@@ -5,7 +5,7 @@ We propose formal guidelines to conduct an Individual Patient Data meta-analysis
 We provide:
 
 - compR: a recreated data set with trial id (trial), group of treatment (grpCT), time of event (failure_time), type of event (failure_type), treatment information (treated/control) and age (continuous variable)
-- Meta-analysis for compR: R script with functions for
+- Meta-analysis_for_compR: R script with functions for
  
          -drawing forest plots
          
@@ -17,7 +17,7 @@ We provide:
          
          -evaluate interaction between treatment effect and individual-level covariates
  
-- Meta-analysis_example: results of the proposed analysis using the compR data (analysis on local relapse).
+- Meta-analysis_ex: results of the proposed analysis using the compR data (analysis on local relapse).
  
 
 
