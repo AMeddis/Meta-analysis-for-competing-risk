@@ -38,4 +38,4 @@ Data is confidential, thus we provide a recreated data set (compR.Rdata) similar
 For questions, comments or remarks about the code please contact A. Meddis (alessandra.meddis@curie.fr / alessandra.meddis@gmail.com).
 
  
-###### Supplementary material and code for the paper "Meta-analysis of clinical trials with competing time-to-event endpoints" by A. Meddis, A. Latouche, B. Zhou, S. Michiels and J. Fine .
+###### Supplementary material and code for the paper "Meta-analysis of clinical trials with competing time-to-event endpoints" by A. Meddis, A. Latouche, B. Zhou, S. Michiels and J. Fine : https://doi.org/10.1002/bimj.201900103
