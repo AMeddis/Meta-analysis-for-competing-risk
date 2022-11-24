@@ -35,7 +35,7 @@ cmprsk_2.2-9    survival_2.41-3  prodlim_2019.11.13
 
 Data is confidential, thus we provide a recreated data set (compR.Rdata) similar to the one used for the application, with same number of trials for each treatment group. Informations on trial id (trial), group of treatment (grpCT), time of event (failure_time), type of event (failure_type), treatment information (treated/control) and age (continuous variable) are introduced in the data set.
 
-For questions, comments or remarks about the code please contact A. Meddis (alessandra.meddis@curie.fr / alessandra.meddis@gmail.com).
+For questions, comments or remarks about the code please contact A. Meddis (alessandra.meddis@gmail.com).
 
  
 ###### Supplementary material and code for the paper "Meta-analysis of clinical trials with competing time-to-event endpoints" by A. Meddis, A. Latouche, B. Zhou, S. Michiels and J. Fine : https://doi.org/10.1002/bimj.201900103
